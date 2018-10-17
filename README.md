@@ -1,1 +1,1 @@
-# storemanager-endpoints
+# storemanager endpoints
