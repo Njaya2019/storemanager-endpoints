@@ -12,4 +12,11 @@ def test_post(cli_ent):
     data=json.loads(response.data)
     assert "The transaction has been completed" in data["message"]
 
+def test_get_sale_record(cli_ent):
+    response=cli_ent.get('/api/v1/attendant/sales/'+str(2))
+    data=json.loads(response.data)
+    assert data=={'Sale':{'sale_id':2,'attendant_id':1,'product_sold':1,'date':'Oct 9, 2018 9:00 A.M','transanction_cost':100}}
+
+
+
 

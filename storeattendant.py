@@ -3,7 +3,7 @@ from flask import request, jsonify, abort
 from admin import admin
 
 class storeattendant(MethodView):
-    sales=[{'sale_id':1,'attendant_id':1,'product_id':2,'date':'Oct 8, 2018 12:00 P.M','transanction_cost':59.98},
+    sales=[{'sale_id':1,'attendant_id':1,'product_id':2,'date':'Oct 8, 2018 8:23 A.M','transanction_cost':59.98},
            {'sale_id':2,'attendant_id':1,'product_sold':1,'date':'Oct 9, 2018 9:00 A.M','transanction_cost':100},
            {'sale_id':3,'attendant_id':1,'product_id':3,'date':'Oct 9, 2018 11:30 A.M','transanction_cost':60}]
     
@@ -18,5 +18,8 @@ class storeattendant(MethodView):
                 }
         self.sales.append(sale)
         return jsonify({'message':'The transaction has been completed'})
-    def get(self):
-        pass
+    def get(self, saleId):
+        attendant_id=1
+        sale_record=self.sales[saleId-1]
+        if sale_record['attendant_id']==attendant_id:
+            return jsonify({'Sale':sale_record})
