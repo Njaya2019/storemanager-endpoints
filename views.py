@@ -6,3 +6,4 @@ admin_view=admin.as_view('admin_api')
 
 admin_app.add_url_rule('/api/v1/products', view_func=admin_view, methods=['POST'])
 admin_app.add_url_rule('/api/v1/products',defaults={'product_id':None},view_func=admin_view, methods=['GET'])
+admin_app.add_url_rule('/api/v1/products/<int:product_id>',view_func=admin_view, methods=['GET'])
