@@ -6,8 +6,10 @@ class admin(MethodView):
              {'product_id':2,'product_name':'Logitech keyboard','price':60,'quantity':150},
              {'product_id':3,'product_name':'Subwoofer Desktop Speakers','price':20,'quantity':80}]
 
-    def get(self):
-        pass
+    def get(self, product_id):
+        if not product_id:
+            return jsonify({'Products':self.products})
+        
     def post(self):
      #request_keys=('product_name','price','quantity')
         if not request.json:
