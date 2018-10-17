@@ -1,5 +1,4 @@
-import pytest, json
-import sys  
+import pytest, json 
 from application import app
 
  
