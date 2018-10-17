@@ -23,5 +23,12 @@ def test_get(cli_ent):
                               {'product_id':3,'product_name':'Subwoofer Desktop Speakers','price':20,'quantity':80},
                               {'product_id':4,'product_name':'Timberland shoes','price':40,'quantity':10}]}
 
+def test_get_one_pet(cli_ent):
+    response=cli_ent.get('/api/v1/products/'+str(3))
+    data=json.loads(response.data)
+    assert data=={'Product':{'product_id':3,'product_name':'Subwoofer Desktop Speakers','price':20,'quantity':80}}
+
+
     
+      
 
