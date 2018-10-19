@@ -26,7 +26,7 @@ def test_get(cli_ent):
 def test_get_one_pet(cli_ent):
     response=cli_ent.get('/api/v1/admin/products/'+str(3))
     data=json.loads(response.data)
-    assert data=={'Product':{'product_id':3,'product_name':'Subwoofer Desktop Speakers','price':20,'quantity':80}}
+    assert data=={'Product':{'product_name':'Subwoofer Desktop Speakers','price':20,'quantity':80}}
 
 
     

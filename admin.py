@@ -14,6 +14,13 @@ class admin(MethodView):
                del p['product_id']
                pr_odcts.append(p)
             return jsonify({'Products':pr_odcts})
+        if product_id:
+            pr_position=product_id-1
+            return jsonify({'Product':{
+                        'product_name':self.products[pr_position]['product_name']
+                        ,'price':self.products[pr_position]['price'],
+                        'quantity':self.products[pr_position]['quantity']}})
+
             
         
     def post(self):
