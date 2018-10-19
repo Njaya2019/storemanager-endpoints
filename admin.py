@@ -6,6 +6,7 @@ class admin(MethodView):
              {'product_id':2,'product_name':'Logitech keyboard','price':60,'quantity':150},
              {'product_id':3,'product_name':'Subwoofer Desktop Speakers','price':20,'quantity':80}]
 
+
     def get(self, product_id):
         if not product_id:
             pr_odcts=[]
@@ -16,6 +17,8 @@ class admin(MethodView):
             return jsonify({'Products':pr_odcts})
             
                 
+
+ 
             
         
     def post(self):
