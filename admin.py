@@ -8,7 +8,15 @@ class admin(MethodView):
 
     def get(self, product_id):
         if not product_id:
-            return jsonify({'Products':self.products})
+            pr_odcts=[]
+            pr_odct={}
+            for p in self.products:
+               del p['product_id']
+               pr_odcts.append(p)
+            return jsonify({'Products':pr_odcts})
+            
+                
+            
         
     def post(self):
      #request_keys=('product_name','price','quantity')
