@@ -4,4 +4,4 @@
 
 
 
-[![Coverage Status](https://coveralls.io/repos/github/Njaya2019/storemanager-endpoints/badge.png?branch=master)](https://coveralls.io/github/Njaya2019/storemanager-endpoints?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Njaya2019/storemanager-endpoints/badge.svg?branch=master)](https://coveralls.io/github/Njaya2019/storemanager-endpoints?branch=master)
