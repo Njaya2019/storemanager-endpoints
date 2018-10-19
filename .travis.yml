@@ -16,5 +16,5 @@ before_install:
 script:
  - pytest --cov=.
 
-after_sucess:
+after_success:
  - coveralls
