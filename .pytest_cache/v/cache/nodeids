@@ -1,7 +1,0 @@
-[
-  "test_admin.py::test_post",
-  "test_admin.py::test_get",
-  "test_admin.py::test_get_one_pet",
-  "test_admin_sales.py::test_get",
-  "test_storeattendant.py::test_post"
-]
