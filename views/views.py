@@ -1,7 +1,8 @@
 from flask import Blueprint
-from admin import admin
-from storeattendant import storeattendant
-from admin_sales import admin_sales
+from storeattendant.storeattendant import storeattendant
+from admin.admin_sales import admin_sales
+from admin.admin import admin
+
 
 admin_app=Blueprint('admin',__name__)
 admin_sales_app=Blueprint('admin_sales',__name__)

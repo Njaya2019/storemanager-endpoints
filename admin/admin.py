@@ -11,8 +11,10 @@ class admin(MethodView):
             pr_odcts=[]
             pr_odct={}
             for p in self.products:
-               del p['product_id']
-               pr_odcts.append(p)
+                pr_odct.update({'Product name':p['product_name'],
+                'Quantity':p['quantity'],'Price':p['price']
+                })
+                pr_odcts.append(pr_odct.copy())
             return jsonify({'Products':pr_odcts})
         if product_id:
             pr_position=product_id-1
@@ -27,11 +29,11 @@ class admin(MethodView):
      #request_keys=('product_name','price','quantity')
         if not request.json:
             abort(400)
-        product={'product_id':len(self.products)+1,
-                 'product_name':request.json['product_name'],
-                 'price':request.json['price'],
-                 'quantity':request.json['quantity']
+        product={"product_id":len(self.products)+1,
+                 "product_name":request.json["product_name"],
+                 "price":request.json["price"],
+                 "quantity":request.json["quantity"]
                 }
         self.products.append(product)
-        return jsonify({'message':'The product was added'})
+        return jsonify({"message":"The product was added"})
 

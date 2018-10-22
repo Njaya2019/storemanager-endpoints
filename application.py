@@ -2,7 +2,7 @@ from flask import Flask
 
 app=Flask(__name__)
 
-from views import admin_app,attendant_app,admin_sales_app
+from views.views import admin_app,attendant_app,admin_sales_app
 
 app.register_blueprint(admin_app)
 app.register_blueprint(attendant_app)
