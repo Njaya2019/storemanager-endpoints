@@ -8,9 +8,13 @@ install:
  - pip install coverage
  - pip install coveralls
  - pip install pytest pytest-cov
+
+before_install:
+ - git clone https://github.com/Njaya2019/storemanager-endpoints.git
+ - cd storemanager-endpoints 
  
 script:
  - pytest --cov=.
 
-after_sucess:
+after_success:
  - coveralls
