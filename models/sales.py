@@ -23,7 +23,7 @@ class sales():
                                   'transanction_cost':total_cost
                 })
                 self.sales_list.append(sale_dict)
-                return 'The sale has been made'
+        return 'The sale has been made'
     def get_sale(self, sale_id=None):
         if self.sales_list:
             if sale_id:
@@ -50,9 +50,9 @@ class sales():
                 p_positon=p_id-1
                 pro_duct=products.products_list[p_positon]
                 sale_dict.update({'Product name':pro_duct['product_name'],
-                          'Date sold':sale_record['date'],
-                          'Total cost':sale_record['transanction_cost'],
-                          'Quantity bought':sale_record['quantity']
+                          'Date sold':s['date'],
+                          'Total cost':s['transanction_cost'],
+                          'Quantity bought':s['quantity']
                          })
                 another_sales_list.append(sale_dict.copy())
             return another_sales_list
