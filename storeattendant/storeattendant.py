@@ -1,6 +1,6 @@
 from flask.views import MethodView
 from flask import request, jsonify, abort
-from admin import admin
+from admin.admin import admin
 
 class storeattendant(MethodView):
     sales=[{'sale_id':1,'attendant_id':1,'product_id':2,'date':'Oct 8, 2018 8:23 A.M','transanction_cost':59.98},

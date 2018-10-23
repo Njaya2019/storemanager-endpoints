@@ -1,0 +1,7 @@
+/.vscode/
+/__pycache__/
+/.pytest_cache/
+/admin/__pycache__/
+/storeattendant/__pycache__/
+/tests/__pycache__/
+/views/__pycache__/
