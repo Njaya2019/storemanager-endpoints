@@ -1,5 +1,5 @@
 
-class products:
+class products():
 
     products_list=[]
     def __init__(self, p_name, price,quantity):

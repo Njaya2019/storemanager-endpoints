@@ -13,15 +13,15 @@ def test_post(cli_ent):
     product_name='Iphone 6 plus',quantity=1
     )), content_type="application/json")
     data=json.loads(response.data)
-
     assert 'The sale has been made' in data["message"]
 
-def test_get_sale_record(cli_ent):
+
+
+def test_get__empty_sale_record(cli_ent):
     response=cli_ent.get('/api/v1/attendant/sales/'+str(2))
     data=json.loads(response.data)
-    if not data:
-        assert 'The sale record wasn\'t found' in data["message"]
-    assert data=={'Sale':storeattendant.s.get_sale(2)}
+    assert response.status_code==404
+    assert 'The sale record wasn\'t found' in data["message"]
 
 
 
