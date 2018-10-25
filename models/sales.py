@@ -15,11 +15,14 @@ class sales():
         for p in products.products_list:
             if self.product_name==p['product_name']:
                 total_cost=p['price'] * self.quantity
+                if p['quantity'] < self.quantity:
+                    return 'Quantity to be bought exceeds amount in invetory'
                 p['quantity']=p['quantity']-self.quantity
                 p.update({'quantity':p['quantity']})
                 sale_dict.update({'sale_id':self.sale_id,'attendant_id':1, 'product_id':p['product_id'], 'quantity':self.quantity, 'date':self.date_sale_made,'transanction_cost':total_cost})
                 self.sales_list.append(sale_dict)
-        return 'The sale has been made'
+                return 'The sale has been made'
+        return 'The product is not in the inventory'
 
     def get_sale(self, sale_id):
         if self.sales_list:
