@@ -9,7 +9,7 @@ class admin_sales(MethodView):
     def get(self,saleId):
         if saleId:
             requested_sale=self.s.get_sale(saleId)
-            if not requested_sale:
+            if not isinstance(requested_sale,dict):
                 return jsonify({'message':'The sale record wasn\'t found'}),404
             return jsonify({'Sale':requested_sale})
         else:
