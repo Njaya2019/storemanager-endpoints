@@ -21,7 +21,7 @@ class storeattendant(MethodView):
             return jsonify({'message':'Please provide all values'})
         self.s=sales(pro_name,pro_qty)
         sale_made=self.s.make_sale()
-        return jsonify({'Sale made':sale_made})
+        return jsonify({'message':sale_made})
             
         
 
