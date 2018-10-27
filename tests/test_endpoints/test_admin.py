@@ -16,7 +16,16 @@ def test_post(cli_ent):
     data=json.loads(response.data)
     assert response.status_code==200
     assert "The product has been added" in data["message"]
-
+def test_post_empty_string(cli_ent):
+    empty_response=cli_ent.post('api/v1/admin/products', data=json.dumps(dict(product_name='',
+    price=40,quantity=10)), content_type="application/json")
+    empty_data=json.loads(empty_response.data)
+    assert "Please provide all values" in empty_data["message"]
+def test_post_invalid_values(cli_ent):
+    invalid_response=cli_ent.post('api/v1/admin/products', data=json.dumps(dict(product_name=123,
+    price=40,quantity=10)), content_type="application/json")
+    invalid_data=json.loads(invalid_response.data)
+    assert "Please provide valid strings or integers" in invalid_data["message"]
 
 
 def test_get(cli_ent):
