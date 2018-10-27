@@ -16,7 +16,7 @@ def test_post(cli_ent):
     product_name='Iphone 6 plus',quantity=1
     )), content_type="application/json")
     data=json.loads(response.data)
-    assert data=={'Sale made':storeattendant.s.make_sale()}
+    assert data=={'message':'The product is not in the inventory'}
 
 def get_sale_record(cli_ent):
     response=cli_ent.get('/api/v1/attendant/sales/'+str(1))
