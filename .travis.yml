@@ -10,7 +10,7 @@ install:
  - pip install pytest pytest-cov
 
 before_install:
- - git clone https://github.com/Njaya2019/storemanager-endpoints/tree/developer
+ - git clone -b developer https://github.com/Njaya2019/storemanager-endpoints.git
  - cd storemanager-endpoints 
  
 script:
