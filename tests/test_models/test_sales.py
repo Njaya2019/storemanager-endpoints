@@ -24,7 +24,6 @@ def test_sale_produc_stock():
     assert qty_exceeds=='Quantity to be bought exceeds amount in invetory'
 
 def test_products_inventory():
-    pr=products(p_name=None,price=None,quantity=None)
     sl=sales('subwoofer',2)
     no_products=sl.make_sale()
     assert no_products=='The product is not in the inventory'
