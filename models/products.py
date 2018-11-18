@@ -18,7 +18,7 @@ class products():
                 if product_id > len(self.products_list):
                     return 'The product wasn\'t found'   
                 product_position=product_id-1
-                pro_duct={'product id':self.products_list[product_position]['product_id'],'Product name':self.products_list[product_position]['product_name'],'Product price':self.products_list[product_position]['price'],'Quantity available':self.products_list[product_position]['quantity']}
+                pro_duct={'product_id':self.products_list[product_position]['product_id'],'Product_name':self.products_list[product_position]['product_name'],'Product_price':self.products_list[product_position]['price'],'Quantity_available':self.products_list[product_position]['quantity']}
                 return pro_duct
         else:
             return "There are no products yet"
@@ -28,7 +28,7 @@ class products():
             another_product_list=[]
             products_dict={}
             for p in self.products_list:
-                products_dict.update({'product id':p['product_id'], 'Product name':p['product_name'], 'Product price':p['price'],'Quantity available':p['quantity']})
+                products_dict.update({'product_id':p['product_id'], 'Product_name':p['product_name'], 'Product_price':p['price'],'Quantity_available':p['quantity']})
                 another_product_list.append(products_dict.copy())
             return another_product_list
         else:
