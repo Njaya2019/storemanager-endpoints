@@ -1,3 +1,7 @@
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/Njaya2019/storemanager-endpoints/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/Njaya2019/storemanager-endpoints/test_coverage)
 # Andrew's store endpoints
 - These are endpoints that implement the store's general operations,making sure that it runs smoothly and meet any budget or sales goal and ensuring high level of customers satisfaction through excellent service. 
 - The store **owner** can add products, view all products in the inventory, view sales made by all store attendants, request to view a specific product alongside it's details and inquire a specific sale record.
